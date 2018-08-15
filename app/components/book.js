@@ -69,9 +69,11 @@ class Book extends React.Component {
               {book.volumeInfo.title || 'Untitled'}
             </Title>
             <Authors>
-              {book.volumeInfo.authors.map((author, i) => {
-                return <span key={i}>{author}</span>
-              })}
+              { !!book.volumeInfo.authors && 
+                book.volumeInfo.authors.map((author, i) => {
+                  return <span key={i}>{author}</span>
+                })
+              }
             </Authors>
             <Year>
               <em>{book.volumeInfo.publishedDate && book.volumeInfo.publishedDate.split('-')[0]}</em>
@@ -147,9 +149,11 @@ class Book extends React.Component {
               {book.volumeInfo.title || 'Untitled'}
             </Title>
             <Authors>
-              {book.volumeInfo.authors.map((author, i) => {
-                return <span key={i}>{author}</span>
-              })}
+              { !!book.volumeInfo.authors && 
+                book.volumeInfo.authors.map((author, i) => {
+                  return <span key={i}>{author}</span>
+                })
+              }
             </Authors>
             <Year>
               <em>{book.volumeInfo.publishedDate && book.volumeInfo.publishedDate.split('-')[0]}</em>
