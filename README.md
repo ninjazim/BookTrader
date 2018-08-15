@@ -1,5 +1,5 @@
 # BookTrader
-Book lending app using Mongo, Express, React, Node, Github oauth + Google Books AP
+Book lending app using Mongo, Express, React, Node, Github oauth + Google Books API
 
 ## App Overview
 
