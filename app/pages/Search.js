@@ -25,12 +25,15 @@ class Search extends React.Component {
     let { searchResults, user } = this.props;
 
     let processedResults = searchResults.books.map(book => {
-      let found = user.books.some(b => {
-        return book.id == b.bookId;
-      });
+      let found = false;
+      if (!!user.books) {
+        found = user.books.some(b => {
+          return book.id == b.bookId;
+        });
+      }
       book.userOwns = found;
       return book
-      });
+    });
 
     return (
       <Container>
