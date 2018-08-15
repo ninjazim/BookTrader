@@ -5,7 +5,7 @@ import axios from 'axios';
 import transition from 'styled-transition-group'
 
 import Book from '../components/book';
-import EmptyBook from '../components/emptybook';
+import EmptyBook from '../components/emptyBook';
 
 class ViewBook extends React.Component {
   constructor(props) {
